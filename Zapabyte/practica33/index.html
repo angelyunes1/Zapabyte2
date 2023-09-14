@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>CALZADO DEPORTIVO</title>
+    <header>
+        <div class="header container">
+            <h1 class="logo">ZAPABYTE</h1>
+
+            <nav>
+                <ul class="menu-nav">
+                    <li><a href="index">Inicio</a></li>
+                    <li><a href="hombres">Hombres</a></li>
+                    <li><a href="mujeres">Mujeres</a></li>
+                    <li><a href="niños">Infantil</a></li>
+                    <li><a href="blog">Blog</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- CARRITO  -->
+            <div id="cart-icon" class="carrito">
+                <img src="cart.svg" alt="cart" />
+                <div class="count-products-cart" id="product-count">0</div>
+                <div id="shopping-cart-content">
+                    <table id="lista-carrito" class="u-full-width">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Talle</th>
+                                <th>Cantidad</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src='/practica33/img/1.jpg' width='100'>
+                                </td>
+                                <td>
+                                    titulo de zapatilla
+                                </td>
+                                <td>
+                                    $20
+                                </td>
+                                <td>
+                                    42
+                                </td>
+                                <td>
+                                    5
+                                </td>
+                                <td>
+                                    <a href='#' class='borrar-curso' data-id='${id}'> X </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src='img/1.jpg' width='100'>
+                                </td>
+                                <td>
+                                    titulo de zapatilla
+                                </td>
+                                <td>
+                                    $20
+                                </td>
+                                <td>
+                                    42
+                                </td>
+                                <td>
+                                    5
+                                </td>
+                                <td>
+                                    <a href='#' class='borrar-curso' data-id='${id}'> X </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-responsive">
+            <h1 class="logo-responsive">ZAPABYTE</h1>
+            <p>
+            </p>
+            <div class="container-social-responsive">
+                <a href="#" class="facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#" class="youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#" class="telegram">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="#" class="twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+            <nav>
+                <ul class="menu-nav-responsive">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Hombres</a></li>
+                    <li><a href="#">Mujeres</a></li>
+                    <li><a href="#">Infantil</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="btn-close-responsive">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div id="overlay"></div>
+    </header>
+    </head>
+
+
+<body>
+    <section class="contenido">
+        <div class="mostrador" id="mostrador">
+            <div class="fila">
+                <div id="1" class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/1.jpg" alt="">
+                    </div>
+                    <p class="descripcion">NIKE AIR 97</p>
+                    <span class="precio">$ 1.300</span>
+                </div>
+                <div id="2" class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/2.jpg" alt="">
+                    </div>
+                    <p class="descripcion" id>NIKE RUNNING TERRA </p>
+                    <span class="precio">$ 1.800</span>
+                </div>
+                <div id="3" class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/3.jpg" alt="">
+                    </div>
+                    <p class="descripcion">NIKE WINFLO 8</p>
+                    <span class="precio">$ 3.600</span>
+                </div>
+                <div id="4" class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/4.jpg" alt="">
+                    </div>
+                    <p class="descripcion">NIKE LOW-TOP</p>
+                    <span class="precio">$ 1.800</span>
+                </div>
+            </div>
+            <div class="fila">
+                <div id="5" class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/5.jpg" alt="">
+                    </div>
+                    <p class="descripcion">NIKE BLAZER 97</p>
+                    <span class="precio">$ 1300</span>
+                </div>
+                <div id="6" class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/6.jpg" alt="">
+                    </div>
+                    <p class="descripcion">NIKE LEGEND ESENTIAL</p>
+                    <span class="precio">$ 2.000</span>
+                </div>
+                <div id="7" class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/7.jpg" alt="">
+                    </div>
+                    <p class="descripcion">NIKE AIR ZOOM</p>
+                    <span class="precio">$ 2.500</span> 
+                </div>
+                <div id="8" class="item" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="img/8.jpg" alt="">
+                    </div>
+                    <p class="descripcion">NIKE TERRA KING</p>
+                    <span class="precio">$ 1.800</span>
+                </div>
+            </div> 
+        </div>
+        <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+        <div class="seleccion" id="seleccion">
+            <div class="cerrar" onclick="cerrar()">
+                &#x2715
+            </div>
+            <div class="info">
+                <img src="img/1.jpg" alt="" id="img">
+                <h2 id="modelo">NIKE MODEL 1</h2>
+                <p id="descripcion">Descripción Modelo 1</p>
+
+                <span class="precio" id="precio">$ 130</span>
+
+                <div class="fila">
+                    <div class="size">
+                        <label for="">SIZE</label>
+                        <select id="size-select">
+                            <option value="40">40</option>
+                            <option value="42">42</option>
+                            <option value="44">44</option>
+                            <option value="46">46</option>
+                        </select>
+                    </div>
+                    <button id="add-to-cart">AGREGAR AL CARRITO</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer">
+            <h1 class="logo">ZAPABYTE</h1>
+
+            <div class="container-social">
+                <a href="#" class="facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span>facebook</span>
+                </a>
+                <a href="https://www.youtube.com/channel/UC6ZqzTu-T77_yp1TCIIy93g" class="youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>Youtube</span>
+                </a>
+                <a href="#" class="telegram">
+                    <i class="fa-brands fa-telegram"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://twitter.com/_SantiagoJuarez" class="twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+            </div>
+
+            <div class="user-footer">
+                <ul>
+                    <li><a href="blog">Registrate</a></li>
+                    <li><a href="blog">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <div class="container-policies">
+                <ul>
+                    <li>
+                        <a href="#">Política de Privacidad</a>
+                    </li>
+                    <li>
+                        <a href="#">Política de Devoluciones</a>
+                    </li>
+                    <li>
+                        <a href="#">Términos de comprar</a>
+                    </li>
+                    <li>
+                        <a href="#">Preguntas Frequentes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

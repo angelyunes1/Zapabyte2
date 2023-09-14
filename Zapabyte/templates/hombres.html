@@ -4,28 +4,28 @@
 <section class="contenido">
     <div class="mostrador" id="mostrador">
         <div class="fila">
-            <div id="1" class="item" onclick="cargar(this)">
+            <div data-id="1" class="item">
                 <div class="contenedor-foto">
                     <img src="/static/imgs/hombres/hombre1.jpg" alt="">
                 </div>
                 <p class="descripcion">NIKE AIR DUNK JUMBO</p>
                 <span class="precio">$ 93.999,00</span>
             </div>
-            <div id="2" class="item" onclick="cargar(this)">
+            <div data-id="2" class="item">
                 <div class="contenedor-foto">
                     <img src="static/imgs/hombres/hombre2.jpg" alt="">
                 </div>
                 <p class="descripcion" id>NIKE AIR FORCE 1 SHADOW </p>
                 <span class="precio">$ 106.499,00</span>
             </div>
-            <div id="3" class="item" onclick="cargar(this)">
+            <div data-id="3" class="item">
                 <div class="contenedor-foto">
                     <img src="static/imgs/hombres/hombre3.jpg" alt="">
                 </div>
                 <p class="descripcion">JORDAN AIR 5 RETRO</p>
                 <span class="precio">$ 112.499,0</span>
             </div>
-            <div id="4" class="item" onclick="cargar(this)">
+            <div data-id="4" class="item">
                 <div class="contenedor-foto">
                     <img src="static/imgs/hombres/hombre4.jpg" alt="">
                 </div>
@@ -34,28 +34,28 @@
             </div>
         </div>
         <div class="fila">
-            <div id="5" class="item" onclick="cargar(this)">
+            <div data-id="5" class="item">
                 <div class="contenedor-foto">
                     <img src="static/imgs/hombres/hombre5.jpg" alt="">
                 </div>
                 <p class="descripcion">ADIDAS ORIGINALS ZX 1K BOOST</p>
                 <span class="precio">$ 38.999,00</span>
             </div>
-            <div id="6" class="item" onclick="cargar(this)">
+            <div data-id="6" class="item">
                 <div class="contenedor-foto">
                     <img src="static/imgs/hombres/hombre6.jpg" alt="">
                 </div>
                 <p class="descripcion"> FILA ACD MID</p>
                 <span class="precio">$ 47.299</span>
             </div>
-            <div id="7" class="item" onclick="cargar(this)">
+            <div data-id="7" class="item">
                 <div class="contenedor-foto">
                     <img src="static/imgs/hombres/hombre7.jpg" alt="">
                 </div>
                 <p class="descripcion">PUMA RBD GAME</p>
                 <span class="precio">$ 44.999</span>
             </div>
-            <div id="8" class="item" onclick="cargar(this)">
+            <div data-id="8" class="item">
                 <div class="contenedor-foto">
                     <img src="static/imgs/hombres/hombre8.jpg" alt="">
                 </div>
@@ -66,7 +66,7 @@
     </div>
     <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
     <div class="seleccion" id="seleccion">
-        <div class="cerrar" onclick="cerrar()">
+        <div class="cerrar">
             &#x2715
         </div>
         <div class="info">
@@ -80,8 +80,11 @@
                     <label for="">SIZE</label>
                     <select id="size-select">
                         <option value="40">40</option>
+                        <option value="41">41</option>
                         <option value="42">42</option>
+                        <option value="43">43</option>
                         <option value="44">44</option>
+                        <option value="45">45</option>
                         <option value="46">46</option>
                     </select>
                 </div>
@@ -90,9 +93,5 @@
         </div>
     </div>
 </section>
-
-<script src="static\js\index.js"></script>
-
-<script src="static\js\scripts.js"></script>
 
 {% endblock %}

@@ -34,84 +34,6 @@ acc.forEach(button => {
     });
 });
 
-const sizeButtons = document.querySelectorAll('.btn-size');
-const valueSize = document.querySelector('#value-size');
-
-sizeButtons.forEach(button => {
-    button.addEventListener('click', e => {
-        sizeButtons.forEach(btn => btn.classList.remove('selected'));
-        e.currentTarget.classList.add('selected');
-        const size = e.target.textContent;
-        valueSize.innerText = size;
-    });
-});
-
-const colorButtons = document.querySelectorAll('.container-color');
-const valueColor = document.querySelector('#value-color');
-
-colorButtons.forEach(button => {
-    button.addEventListener('click', e => {
-        colorButtons.forEach(btn => btn.classList.remove('selected'));
-        e.currentTarget.classList.add('selected');
-        const color = e.target.dataset.color;
-        valueColor.innerText = color;
-    });
-});
-
-const btnIncrement = document.querySelector('#btn-increment');
-const btnDecrement = document.querySelector('#btn-decrement');
-const countProduct = document.querySelector('#count-product');
-const totalProductsCart = document.querySelector(
-    '.count-products-cart'
-);
-const btnAddToCart = document.querySelector('.btn-add-to-cart');
-
-const priceElement = document.querySelector('.price');
-const quantityProduct = document.querySelector('#quantity-product');
-const totalValue = document
-    .querySelector('.value')
-    .querySelector('p');
-const totalPrice = document.querySelector('.price-total');
-
-// Función para actualizar el estado del botón de decrementar
-const updateButtonState = () => {
-    if (parseInt(countProduct.textContent) <= 1) {
-        btnDecrement.disabled = true;
-    } else {
-        btnDecrement.disabled = false;
-    }
-};
-
-const updateValueQuantity = () => {
-    let quantity = parseInt(countProduct.textContent);
-    let price = parseInt(priceElement.textContent.replace('$', ''));
-    let total = `$${quantity * price}.000`;
-    quantityProduct.textContent = quantity;
-    totalValue.textContent = total;
-    totalPrice.textContent = total;
-};
-
-// Event listener para el botón de incrementar
-btnIncrement.addEventListener('click', () => {
-    countProduct.textContent = parseInt(countProduct.textContent) + 1;
-    updateValueQuantity();
-    updateButtonState();
-});
-
-// Event listener para el botón de decrementar
-btnDecrement.addEventListener('click', () => {
-    countProduct.textContent = parseInt(countProduct.textContent) - 1;
-    updateValueQuantity();
-    updateButtonState();
-});
-
-btnAddToCart.addEventListener('click', () => {
-    totalProductsCart.textContent =
-        parseInt(totalProductsCart.textContent) +
-        parseInt(countProduct.textContent);
-    countProduct.textContent = 1;
-    updateValueQuantity();
-});
 
 
 /* ********************************** */
@@ -133,7 +55,3 @@ menuClose.addEventListener('click', () => {
     overlay.style.display = 'none';
     document.body.style.overflow = 'auto'; // Desbloquea el scroll
 });
-
-// Actualiza el estado del botón de decrementar al cargar la página
-updateButtonState();
-
