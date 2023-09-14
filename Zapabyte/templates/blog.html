@@ -1,10 +1,10 @@
-{% extends 'layout-contact.html' %} {% block title %} Contacto {% endblock %} {% block body %}
-
-
+{% extends 'layout-contact.html' %}
+{% block title %} Contacto {% endblock %}
+{% block body %}
 <div class="contact-container">
     <h1>Contacto</h1>
     <p>¡Esperamos con ansias tus consultas! Estamos aquí para responder a todas tus preguntas sobre nuestros productos.</p>
-    <form mb-3 id="contact-form">
+    <form mb-3 id="contact-form" method="POST" action="/insertar_comentario"> <!-- Agrega el método y la acción -->
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <label for="correo">Correo Electrónico:</label>
@@ -14,18 +14,12 @@
         <button type="submit">Enviar Mensaje</button>
     </form>
 
-    <div>
+    <!-- Elimina esto ya que la respuesta se mostrará después de enviar el formulario -->
+    <!--<div>
         <alert>Mensaje enviado exitosamente. ¡Te responderemos pronto!</alert>
-    </div>
-
-
+    </div>-->
 </div>
-
-
 
 <!-- Agrega aquí tus enlaces a archivos JavaScript -->
 <script src="static/js/scripts.js"></script>
-
-
-<script src="static\js\scripts.js"></script>
 {% endblock %}
